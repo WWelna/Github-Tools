@@ -79,7 +79,7 @@ class IterRepos:
             if self.first_run == True:
                 r = self.client.fetch(f"https://api.github.com/{self.type}/{self.user}/repos?per_page=100")
                 self.results = r['json']
-                self.link = r['link']
+                if 'link' in r: self.link = r['link']
                 self.first_run = False
             else:
                 for l in self.link:
