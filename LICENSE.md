@@ -1,8 +1,4 @@
-# Github-Tools
-
-* **git_clone.py** - Runs "git clone <repo>" on every public repo for specified User or Organization account.
-
-## The No Vibe Coders Open Source License
+# The No Vibe Coders Open Source License
 
 ```
 Copyright (C) 2025 William Welna (wwelna@occultusterra.com)
