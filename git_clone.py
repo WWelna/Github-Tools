@@ -39,7 +39,7 @@ class fetchy:
 
     def __init__(self, UserAgent="Mozilla/5.0 (LOL)"):
         self.UserAgent = UserAgent
-        self.headers = {'user-agent': self.UserAgent}
+        self.headers = {'user-agent': self.UserAgent, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'}
         self.linkRE = re.compile("<([a-zA-Z0-9\&\/:\?\=\.\_\-]+)>; rel=\"([a-z]+)\"")
     
     def fetch(self, url):
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     import subprocess
     
     parser = argparse.ArgumentParser(description='Mirror Github Repos of a User/Group')
-    parser.add_argument('--type', help="Specify if it's a 'user' or 'orgs' to mirror", default='user')
+    parser.add_argument('--type', help="Specify if it's a 'user' or 'orgs' to mirror", default='users')
     parser.add_argument('name', help="Name of Organization or User to mirror")
     args = parser.parse_args()
     
